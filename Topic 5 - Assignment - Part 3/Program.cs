@@ -23,7 +23,7 @@ Console.WriteLine();
 
 Console.WriteLine("What element is combined with hydrogen to make water?");
 waterElement = Console.ReadLine();
-if (waterElement.ToLower() == "oxygen" || waterElement.ToUpper() == "O2")
+if (waterElement.ToLower() == "oxygen" || waterElement.ToUpper() == "O" || waterElement.ToUpper() == "O2")
 {
     Console.WriteLine("That's correct.");
     score += 1;
@@ -72,7 +72,7 @@ else
     Console.WriteLine("That's an invalid answer.");
 Console.WriteLine();
 
-Console.WriteLine("You got " + score + " answers correct. That's a score of" + Math.Round(score, 1));
+Console.WriteLine("You got " + score + " answers correct. That's a score of " + Math.Round((score / 4 * 100), 1) + "%.");
 if (score == 0)
     Console.WriteLine("You're not too good at this, are you?");
 else if (score == 4)
